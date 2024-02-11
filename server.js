@@ -1,5 +1,5 @@
 import express from "express";
-import { join } from "path";
+import path, { join } from "path";
 import mongoose from "mongoose";
 import passport from "passport";
 import session from "express-session";
