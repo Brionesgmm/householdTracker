@@ -12,42 +12,51 @@ import Profile from "./routes/Profile";
 import Logout from "./routes/Logout";
 import Feed from "./routes/Feed";
 import Post from "./routes/Post";
+import ItemsTracker from "./routes/ItemsTracker";
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Root />,
+//     errorElement: <ErrorPage />,
+//     children: [
+//       {
+//         index: true,
+//         element: <Index />,
+//       },
+//       {
+//         path: "/login",
+//         element: <Login />,
+//       },
+//       {
+//         path: "/logout",
+//         element: <Logout />,
+//       },
+//       {
+//         path: "/signup",
+//         element: <Signup />,
+//       },
+//       {
+//         path: "/profile",
+//         element: <Profile />,
+//       },
+//       {
+//         path: "/feed",
+//         element: <Feed />,
+//       },
+//       {
+//         path: "/post/:id",
+//         element: <Post />,
+//       },
+//     ],
+//   },
+// ]);
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <ItemsTracker />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Index />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/logout",
-        element: <Logout />,
-      },
-      {
-        path: "/signup",
-        element: <Signup />,
-      },
-      {
-        path: "/profile",
-        element: <Profile />,
-      },
-      {
-        path: "/feed",
-        element: <Feed />,
-      },
-      {
-        path: "/post/:id",
-        element: <Post />,
-      },
-    ],
   },
 ]);
 
