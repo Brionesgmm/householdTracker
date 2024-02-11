@@ -3,6 +3,7 @@ import api from "../services/api";
 import TabComponent from "../components/TabComponent";
 import AddItemComponent from "../components/AddItemComponent";
 import ItemComponent from "../components/ItemComponent";
+import ScrollToTopButton from "../components/ScrollToTopButton ";
 
 const ItemsTracker = () => {
   const [items, setItems] = useState([]);
@@ -89,6 +90,7 @@ const ItemsTracker = () => {
         />
       )}
       <AddItemComponent onAdd={handleItemAdd} />
+      <ScrollToTopButton />
     </div>
   );
 };

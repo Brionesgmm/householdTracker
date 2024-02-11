@@ -1,16 +1,27 @@
 import express from "express";
-import * as authController from "../controllers/auth.js";
-import * as postsController from "../controllers/posts.js";
-import { ensureAuth, ensureGuest } from "../middleware/auth.js";
+import {
+  getItems,
+  createItem,
+  updateItem,
+  deleteItem,
+  resetItems,
+} from "../controllers/itemControllers.js";
 
 const router = express.Router();
 
-// Main Routes - simplified for now
-router.get("/user", authController.getUser);
-router.get("/profile", ensureAuth, postsController.getProfile);
-router.get("/feed", ensureAuth, postsController.getFeed);
-router.post("/login", authController.postLogin);
-router.get("/logout", authController.logout);
-router.post("/signup", authController.postSignup);
+// Route to get all items
+router.get("/items", getItems);
+
+// Route to create a new item
+router.post("/items", createItem);
+
+// Route to update an existing item
+router.put("/items/:id", updateItem);
+
+// Route to delete an item
+router.delete("/items/:id", deleteItem);
+
+// Route to reset all items
+router.post("/items/reset", resetItems);
 
 export default router;

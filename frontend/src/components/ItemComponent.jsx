@@ -108,7 +108,7 @@ const ItemComponent = ({ items, onEdit, onDelete }) => {
             </form>
           ) : (
             <div className="flex items-center justify-between">
-              <div>
+              <div className="mr-2">
                 <span className="block text-sm font-medium text-gray-900">
                   {item.name}
                 </span>
@@ -123,7 +123,7 @@ const ItemComponent = ({ items, onEdit, onDelete }) => {
                     type="checkbox"
                     checked={item.checked}
                     onChange={() => handleCheckedChange(item, !item.checked)}
-                    className="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mr-1"
                   />
                   Already Have
                 </label>

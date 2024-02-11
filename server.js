@@ -12,8 +12,13 @@ import postRoutes from "./routes/posts.js";
 import cors from "cors";
 import initializePassport from "./config/passport.js";
 import dotenv from "dotenv";
+import { fileURLToPath } from "url";
 
 const app = express();
+
+// Calculate the directory name
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Use .env file in config folder
 dotenv.config({ path: "./config/.env" });
